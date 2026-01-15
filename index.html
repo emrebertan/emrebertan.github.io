@@ -3,30 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emre Bertan</title>
+    <title>Emre Bertan - CV & Portfolyo</title>
     <style>
+        /* Genel Ayarlar */
+        :root {
+            --primary-color: #2563eb; /* Mavi tonu */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Profil Kısmı */
+        header {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+            background-color: #ddd; /* Resim yoksa gri görünür */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        .title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .contact-info {
+            margin-top: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        h1 {
-            color: #333;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 4px solid #0078d4;
+
+        .contact-info a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Bölümler (Section) */
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--bg-color);
             padding-bottom: 10px;
+            margin-top: 0;
+            color: var(--text-dark);
+        }
+
+        /* Deneyim ve Eğitim Listesi */
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .timeline-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Yetenek Etiketleri */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { margin: 20px auto; }
         }
     </style>
 </head>
 <body>
 
-    <h1>emre bertan</h1>
+    <div class="container">
+        
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Emre Bertan" class="profile-img">
+            
+            <h1>Emre Bertan</h1>
+            <span class="title">Yazılım Geliştirici / Teknoloji Uzmanı</span> <div class="contact-info">
+                <a href="mailto:email@ornek.com">📧 İletişim</a>
+                <a href="#">🔗 LinkedIn</a>
+                <a href="#">💻 GitHub</a>
+                <a href="#">🌐 Website</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Hakkımda</h2>
+            <p>
+                Merhaba, ben Emre. Teknolojiye tutkulu, sürekli öğrenmeye açık biriyim. 
+                Problemleri çözmekten ve yeni projeler geliştirmekten keyif alırım. 
+                Kariyerime bu alanda yön vermek için çalışmalarımı sürdürüyorum.
+            </p>
+        </section>
+
+        <section>
+            <h2>İş Deneyimi & Projeler</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - Günümüz</div>
+                <div class="timeline-title">Freelance Geliştirici</div>
+                <p class="timeline-desc">
+                    Çeşitli web projeleri ve otomasyon sistemleri üzerine çalışmalar yaptım. 
+                    Müşteri ihtiyaçlarına yönelik özel çözümler ürettim.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2023 - 2024</div>
+                <div class="timeline-title">Stajyer / Junior Pozisyon</div>
+                <p class="timeline-desc">
+                    Ekip içi çalışmalara destek oldum, kod yazımı ve test süreçlerinde görev aldım.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Yetenekler</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Proje Yönetimi</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Eğitim</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2020 - 2024</div>
+                <div class="timeline-title">Üniversite / Bölüm Adı</div>
+                <p class="timeline-desc">İlgili fakülte, not ortalaması veya önemli başarılar.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Emre Bertan. Tüm hakları saklıdır.
+    </footer>
 
 </body>
 </html>
